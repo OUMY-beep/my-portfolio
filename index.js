@@ -33,6 +33,12 @@ function updatePopup(){
 function closePopup(){
     document.getElementById('popup').style.display='none'
 }
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      // Close the popup
+      popup.style.display = 'none'; // Or use whatever method you're using to hide the popup
+    }
+  });
 
 function changeImage(direction) {
     currentInd += direction;
