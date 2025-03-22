@@ -211,6 +211,7 @@ a:hover {
 @media (max-width: 768px) {
     .sectio1{
         padding: 0;
+        margin-right: 10vw;
     }
     .aboutMe {
         margin: 100px auto;
@@ -224,9 +225,7 @@ a:hover {
     .PL, .p1 {
         max-width: 90%;
     }
-    .button{
-        margin-right: 8vw;
-    }
+
 }
 
 footer{
