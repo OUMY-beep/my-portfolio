@@ -31,7 +31,7 @@ body {
     display: flex;
     align-items: center; /* Aligns text vertically */
     justify-content: flex-start; /* Moves text to the left */
-    padding-left: 20px; /* Adjust spacing from the left */
+    padding-left: 10px; /* Adjust spacing from the left */
 }
 /* From Uiverse.io by gharsh11032000 */ 
 .button {
@@ -213,6 +213,11 @@ a:hover {
         padding: 0;
         margin-right: 10vw;
     }
+
+    .links{
+        display: none;
+    }
+
     .aboutMe {
         margin: 100px auto;
         padding: 20px;
