@@ -401,10 +401,13 @@ h3::after {
   
 /* For tablets (screen width 768px or less) */
 @media (max-width: 768px) {
-    body {
+    body
+    {
         font-size: 16px;
         margin: 15px;
     }
+    header {
+        font-size: 16px;}
 }
 
 /* For mobile devices (screen width 480px or less) */
@@ -416,4 +419,6 @@ h3::after {
     .links{
         visibility: hidden;
     }
+    header {
+        font-size: 14px;}
 }
