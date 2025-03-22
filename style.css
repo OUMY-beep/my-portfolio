@@ -1,0 +1,416 @@
+/* --- Global Styles --- */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    z-index: 1;
+    background-color: #0F172A; /* Optional: Set a background color to ensure the header is visible */
+    padding: 20px 0;
+    
+}
+body {
+    padding-top: 100px;
+    background-color: #0F172A; 
+    color: white;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+.sectio1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Moves elements to the left and right */
+    padding: 20px;
+}
+
+.title {
+    display: flex;
+    align-items: center; /* Aligns text vertically */
+    justify-content: flex-start; /* Moves text to the left */
+    padding-left: 20px; /* Adjust spacing from the left */
+}
+/* From Uiverse.io by gharsh11032000 */ 
+.button {
+    position: relative;
+    width: 120px;
+    height: 40px;
+    background-color:  #0F172A;
+    display: flex;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -4px;
+    top: -1px;
+    margin: auto;
+    width: 128px;
+    height: 48px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .button::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+  }
+  
+  .button:hover::after {
+    filter: blur(30px);
+  }
+  
+  .button:hover::before {
+    transform: rotate(-180deg);
+  }
+  
+  .button:active::before {
+    scale: 0.7;
+  }
+  
+  
+
+
+/* --- Header --- */
+.links {
+    padding-bottom: 50px;
+    text-align: center;
+    user-select: none;
+}
+
+/* --- Titre Principal --- */
+.oumy {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+    text-shadow: 0 0 5px #fff, 0 0 10px #9966cc, 0 0 15px #9966cc;
+    
+}
+
+/* --- Section About Me --- */
+.aboutMe {
+    margin: 400px auto 100px; /* Centrer avec espace avant et après */
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 800px;
+    text-align: center;
+    background: linear-gradient(145deg, #0d1324, #121d36);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.5), 
+                -10px -10px 30px rgba(255, 255, 255, 0.1);
+}
+
+/* --- Titres des sections --- */
+.title {
+    margin: 50px 20px;
+    user-select: none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* --- Texte de présentation --- */
+.intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* --- Navigation Links --- */
+.links {
+    text-align: center;
+    padding: 10px;
+}
+.links a:hover {
+    color: #9966cc;
+}
+a {
+    padding: 5px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #38bdf8; /* Light blue hover effect */
+}
+
+/* --- Conteneurs de compétences et projets --- */
+.skills, .projects {
+    margin-top: 200px;
+    text-align: center;
+}
+
+.skills div, .projects div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    height: auto;
+}
+
+/* --- Boîte des compétences et projets --- */
+.PL, .p1 {
+    border: 2px solid #1e293b;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 20px auto;
+    background: linear-gradient(145deg, #1b2a40, #253a5a);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.PL:hover, .p1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+/* --- Icônes des technologies --- */
+.PL i {
+    font-size: 50px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.PL i:hover {
+    transform: scale(1.2);
+    color: #38bdf8;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .aboutMe {
+        margin: 100px auto;
+        padding: 20px;
+    }
+    
+    .skills, .projects {
+        margin-top: 100px;
+    }
+
+    .PL, .p1 {
+        max-width: 90%;
+    }
+}
+
+footer{
+    margin: 200px;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.socials i {
+    font-size: 28px;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.socials i:hover {
+    transform: scale(1.2);
+    color: #0077b5; /* LinkedIn blue */
+}
+
+.socials i:last-child:hover {
+    color: #f5f5f5; /* GitHub white */
+}
+
+.copyright {
+    color: white;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.p1 img {
+    width: 100%;  /* Ensures the image takes up the full width of the container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    object-fit: cover; /* Ensures the image covers the area of the container */
+    border-radius: 10px; /* Optional: to add rounded corners if desired */
+}
+
+/* Popup container */
+.popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top */
+  }
+  
+  .popup-content {
+    background-color:  #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .popup img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+  
+  .popup-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .popup-arrow.left {
+    left: 10px;
+  }
+  
+  .popup-arrow.right {
+    right: 10px;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* White text for contrast */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+    padding: 10px 0;
+    
+    /* Glowing effect */
+    text-shadow: 0 0 5px #fff, 0 0 10px #9966cc, 0 0 15px #9966cc;
+    user-select: none;
+}
+
+/* Adding the two horizontal lines */
+h3::before, 
+h3::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 2px;
+    background-color: #9966cc; /* Adjust the color as needed */
+}
+
+h3::before {
+    left: 0;
+}
+
+h3::after {
+    right: 0;
+}
+
+
+.pro {
+    margin-top: 400px; 
+    background-color: #0f172a;
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+    text-align: center;
+    color: white;
+    user-select: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239966cc' fill-opacity='0.28' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .pro h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+  }
+  
+  .pro p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 5px;
+    font-style: italic;
+    text-shadow: 0 0 5px #fff, 0 0 10px #9966cc, 0 0 15px #9966cc;
+  }
+  
+/* For tablets (screen width 768px or less) */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        margin: 15px;
+    }
+}
+
+/* For mobile devices (screen width 480px or less) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+        margin: 10px;
+    }
+}

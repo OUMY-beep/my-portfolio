@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header class="hidden">
+      <div class="sectio1">
+        <h2 class="title">
+          <b
+            ><span class="oumy">Oumy</span
+            ><span style="color: #9966cc">lio</span></b
+          >
+        </h2>
+        <a href="MON CV.pdf">
+          <button class="button">My CV</button>
+        </a>
+      </div>
+      <div class="links">
+        <a href="#about" onclick="scrollToAbout(event)">About Me</a>
+        <a href="#skills" onclick="scrollToSkills(event)">Skills</a>
+        <a href="#projects" onclick="scrollToProjects(event)">Projects</a>
+        <a href="#socials" onclick="scrollToSocials(event)">Socials</a>
+      </div>
+    </header>
+    <div class="pro hidden">
+      <center><h2>BOUMAZOUED <span style="color: #9966cc">Oumaima</span></h2></center>
+      <p>A 3rd year computer science student</p>
+    </div>
+    <div class="aboutMe hidden" id="about">
+      <center><h3>About Me</h3></center>
+      <br />
+      <p class="intro">
+        Hello,I am <b  style="color: #9966cc">Oumaima</b> a 3rd year computer science student with a
+        strong passion for software development, problem-solving, and
+        technology. I enjoy working on projects that challenge me to think
+        critically and apply what I’ve learned to real-world applications. My
+        interests include web development, algorithms, and database management,
+        and I'm always eager to explore new technologies and improve my coding
+        skills. Through my academic journey and personal projects, I’ve gained
+        experience in Python, Java, C++, and web technologies like HTML, CSS,
+        and JavaScript. Feel free to check out my work and connect with me—I’m
+        always open to learning and collaborating on exciting projects!
+      </p>
+    </div>
+    <br />
+    <div class="skills hidden" id="skills">
+      <center><h3>Skills</h3></center>
+      <br />
+      <div style="display: flex">
+        <div class="PL">
+          <i class="devicon-cplusplus-plain colored"></i><br />
+          <p>C/C++</p>
+        </div>
+        <div class="PL">
+          <i class="devicon-python-plain"></i><br />
+          <p>Python</p>
+        </div>
+        <div class="PL">
+          <i class="devicon-java-plain"></i><br />
+          <p>Java</p>
+        </div>
+        <div class="PL">
+          <i class="devicon-html5-plain colored"></i><br />
+          <p>HTML</p>
+        </div>
+        <div class="PL">
+          <i class="devicon-css3-plain colored"></i><br />
+          <p>CSS</p>
+        </div>
+        <div class="PL">
+          <i class="devicon-javascript-plain"></i><br />
+          <p>JavaScript</p>
+        </div>
+        <div class="PL">
+          <i class="devicon-php-plain colored"></i><br />
+          <p>PHP</p>
+        </div>
+        <div class="PL">
+          <i class="devicon-react-original colored"></i><br />
+          <p>React</p>
+        </div>
+        <div class="PL">
+          <i class="devicon-laravel-plain colored"></i><br />
+          <p>Laravel</p>
+        </div>
+        <div class="PL">
+          <i class="devicon-mysql-plain colored"></i><br />
+          <p>SQL</p>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="projects hidden" id="projects">
+      <center><h3>Projects</h3></center>
+      <div style="display: flex">
+        <div
+          class="p1"
+          onclick="openPopup('Laravel',[
+          'laravelp2.jpg',
+          'laravelp3.jpg',
+          'laravalp1.jpg',
+          'laravelp4.jpg',
+          'laravelp5.jpg',
+          'laravelp6.jpg',
+          'laravelp7.jpg'
+      ], 'This Laravel project was a school-assigned task where I was responsible for the administrator side of a car location system. The admin had various functionalities related to both clients and cars, primarily focused on CRUD operations.')"
+        >
+          <h3>Laravel</h3>
+          <img src="laravalp1.jpg" alt="Laravel project" />
+          <p style="font-size: 1.4em;">An administration inerface for a car location website</p>
+        </div>
+        <div
+          class="p1"
+          onclick="openPopup('Javascript',[
+          'redditp1.png',
+          'redditp2.png',
+          'redditp3.png',
+          'redditp4.png'
+      ], 'This project was an assignment for school, where we were tasked with creating a Reddit clone.')"
+        >
+          <h3>JavaScript</h3>
+          <img src="redditp1.png" alt="Javascript project" />
+          <p style="font-size: 1.4em;">A reddit clone</p>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <footer>
+      <div class="socials" style="display: flex" id="socials">
+        <a
+          href="https://www.linkedin.com/in/oumaima-boumazoued-24708833a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        >
+          <i class="devicon-linkedin-plain colored" style="color: white"></i>
+        </a>
+        <a href="https://github.com/OUMY-beep">
+          <i class="devicon-github-plain colored" style="color: white"></i>
+        </a>
+      </div>
+      <br />
+      <div class="copyright">
+        &copy;<span id="year"></span> Oumaima's Portfolio
+      </div>
+    </footer>
+
+    <!-- Popup container -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="popup-close" onclick="closePopup()">&times;</span>
+        <h3 id="popup-title"></h3>
+        <img id="popup-img" src="" alt="Popup image" />
+        <p style="font-size: 1.4em;" id="popup-desc"></p>
+        <button class="popup-arrow left" onclick="changeImage(-1)">&#10094;</button>
+    <button class="popup-arrow right" onclick="changeImage(1)">&#10095;</button>
+      </div>
+    </div>
+  </body>
+</html>
+
