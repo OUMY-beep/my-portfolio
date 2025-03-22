@@ -209,6 +209,9 @@ a:hover {
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
+    .sectio1{
+        padding: 0;
+    }
     .aboutMe {
         margin: 100px auto;
         padding: 20px;
@@ -220,6 +223,9 @@ a:hover {
 
     .PL, .p1 {
         max-width: 90%;
+    }
+    .button{
+        margin-right: 8vw;
     }
 }
 
